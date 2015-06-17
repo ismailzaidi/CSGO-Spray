@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item
+		android:id="@+id/options_icon"
+		android:icon="@drawable/options_icon"
+		android:showAsAction="always"
+		android:title="options">
+		<menu>
+			<item
+				android:id="@+id/why_icon"
+				android:icon="@drawable/ak47_icon"
+				android:showAsAction="always|withText"
+				android:title="@string/nav_why"/>
+			<item
+				android:id="@+id/about_icon"
+				android:icon="@drawable/about_icon"
+				android:showAsAction="always|withText"
+				android:title="@string/AboutIcon"/>
+		</menu>
+	</item>
+
+</menu>

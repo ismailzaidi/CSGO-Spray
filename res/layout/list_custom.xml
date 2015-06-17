@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal" >
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical" >
+
+		<ImageView
+			android:id="@+id/imageWeapon"
+			android:layout_width="70dp"
+			android:padding="10dp"
+			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:src="@drawable/tec_9" />
+
+	</LinearLayout>
+
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="horizontal" >
+
+		<TextView
+			android:id="@+id/weaponName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@android:color/background_dark"
+			android:padding="10dp"
+			android:text="AK47" />
+
+		<TextView
+			android:id="@+id/weaponPrice"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:gravity="right"
+			android:textColor="@android:color/background_dark"
+			android:padding="10dp"
+			android:textSize="12sp" />
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:background="@android:color/background_dark"
+		android:layout_gravity="center_vertical"
+		android:orientation="vertical" >
+
+		<TextView
+			android:id="@+id/showSprayPattern"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:background="@android:color/background_dark"
+			android:gravity="center_vertical"
+			android:padding="10dp"
+			android:text="@string/patten"
+			android:textColor="@android:color/background_light"
+			android:textSize="12sp" />
+
+	</LinearLayout>
+
+</LinearLayout>

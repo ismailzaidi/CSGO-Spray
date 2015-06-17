@@ -1,0 +1,74 @@
+<resources>
+
+	<string name="app_name">CSGOSpray</string>
+
+	<string-array name="navigation">
+		<item>Select Weapon</item>
+		<item>Why CSGO Spray</item>
+		<item>About</item>
+	</string-array>
+
+	<array name="nav_drawer_icons">
+		<item>@drawable/about_nav_icon</item>
+		<item>@drawable/about_nav_icon</item>
+		<item>@drawable/about_nav_icon</item>
+	</array>
+
+	<color name="list_item_title">#fff</color>
+	<color name="list_background">#12171c</color>
+	<color name="list_background_pressed">#1B1E1F</color>
+	<color name="list_divider">#272727</color>
+ <string name="basic">Basic</string>
+ <string name="basicchild">When you fire a gun in CS:GO, there are two essential factors that affect where your bullets end up hitting: recoil and inaccuracy. Learning to control both of these things is absolutely necessary to master the game.\n\nFinaly repeat: \n1. Inaccuracy \n2. Recoil.</string>
+ <string name="Inaccuracy">Inaccuracy</string>
+ <string name="InaccuracyChild">While the recoil pattern for a particular gun is always the same, bullets do not land in exactly the same place each time. Each weapon has a different amount of inaccuracy, which increases greatly as you move, jump, climb ladders, or as you see here, fire shots in rapid succession. Inaccuracy causes bullets to hit in a random area around their position in the underlying recoil pattern. Higher inaccuracy means a larger area. If you are standing still or crouching, the effect of recoil dominates inaccuracy, which is why it is greatly beneficial to learn the spray pattern for each weapon and make your best effort to compensate for it.\n\nSo lets repeat again. Inaccuracy adds a measure of randomness to the otherwise fixed recoil pattern. It is different for every weapon and is affected at least by the following factors:\n\nRunning > Walking > Standing > Ducking\nJumping\nClimbing ladders\nNumber of shots fired / time</string>
+ <string name="Recoil">Recoil</string>
+ <string name="RecoilChild">The primary effect of recoil is obvious- the bullets travel in an upward pattern and then from side to side. However, note that the bullets don\u2019t necessarily land where the crosshair is pointed. Firing a gun affects both the direction your player is looking and the direction your gun is pointing, but the effect on the gun\u2019s aim is much greater. This means that at the height of your spray, your bullets will always hit above your crosshair. One of the first things new players learn is that they have to \u201cpull down\u201d to compensate for recoil.\n\nIn fact, the recoil pattern for each gun is perfectly repeatable, and advanced players will also compensate for side-to-side motion in order to land more shots on their target.</string>
+ <string name="HowTo">How to Compensate</string>
+ <string name="HowToChild">Most players will quickly learn that they can partially compensate for recoil by pulling the crosshair down while they spray. Let\u2019s ignore the horizontal component of recoil for a moment and see what happens when we limit ourselves to pulling straight down. The line travelling downwards, and the dots that appear at the top show the resulting impacts as governed by the weapon\u2019s recoil. While the first few shots are on target, it is clear that a prolonged spray with this approach will not work. Even at a short distance from your enemy about 80% of your shots are likely to miss. Adding horizontal compensation is absolutely necessary to spray accurately.\n\nThe basics are simple- pull down quickly during the first few shots, then sway left and right. Note that the timing for each of these guns is slightly different, as the M4A4 fires more bullets per second. With this approach the resulting impacts are tightly packed, so if you can memorize these, you will be able to land shots through to the end of your magazine.</string>
+ <string name="AboutIcon">About</string>
+ <string name="AboutText">CSGOSpray aims to provide assistence to players to make their aim better, the team aims to provide further assistance with aim assitance. </string>
+ <string name="CreditIcon">Credit</string>
+ <string name="CreditOne"><a>twowordbird</a></string>
+ <string name="CreditTwo"><a>Android Asynchronous Networking and Image Loading</a></string>
+ <string name="CreditThree">Lastly do not forget to visit the CSGOSpray.com for the desktop version <a>Here</a></string>
+ <string name="patten">Pattern</string>
+ <string name="nav_why">Why CS:GO Spray ?</string>
+ 
+ 
+	<array name="weapon_icons">
+		<item>@drawable/glock</item>
+		<item>@drawable/p2000</item>
+		<item>@drawable/usp_s</item>
+		<item>@drawable/p250</item>
+		<item>@drawable/tec_9</item>
+		<item>@drawable/dual_berettas</item>
+		<item>@drawable/five_seven</item>
+		<item>@drawable/cz75a</item>
+		<item>@drawable/deagle</item>
+		<item>@drawable/negev</item>
+		<item>@drawable/nova</item>
+		<item>@drawable/m249</item>
+		<item>@drawable/mag_7</item>
+		<item>@drawable/sawed_off</item>
+		<item>@drawable/xm1014</item>
+		<item>@drawable/mac_10</item>
+		<item>@drawable/mp7</item>
+		<item>@drawable/mp9</item>
+		<item>@drawable/p90</item>
+		<item>@drawable/pp_bizon</item>
+		<item>@drawable/ump_45</item>
+		<item>@drawable/ak47</item>
+		<item>@drawable/m4a4</item>
+		<item>@drawable/m4a1_s</item>
+		<item>@drawable/aug</item>
+		<item>@drawable/sg_553</item>
+		<item>@drawable/ssg_08</item>
+		<item>@drawable/awp</item>
+		<item>@drawable/g3sg1</item>
+		<item>@drawable/scar_20</item>
+		<item>@drawable/famas</item>
+		<item>@drawable/galil</item>
+	</array>
+
+</resources>
