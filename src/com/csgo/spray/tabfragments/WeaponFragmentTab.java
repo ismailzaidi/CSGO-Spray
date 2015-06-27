@@ -19,9 +19,11 @@ public  class WeaponFragmentTab extends SherlockFragment {
 	private CustomListViewAdapter adapter;
 	private Model model;
 	private ArrayList<Weapon> list;
+	private int memory_list = 0;
 
 	private static class ViewHolder {
 		private ListView listView;
+		private View view;
 	}
 
 	public static WeaponFragmentTab InstanceOf(String category) {
@@ -31,19 +33,24 @@ public  class WeaponFragmentTab extends SherlockFragment {
 		fragment.setArguments(bundle);
 		return fragment;
 	}
-
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		String category = getArguments().getString(KEY_WEAPON);
+		list = Model.getInstance(getSherlockActivity()).getCategory(category);
+		memory_list++;
+	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		ViewHolder holder = new ViewHolder();
-		View view = inflater.inflate(R.layout.fragment_tab_weapon, container,
+		holder.view = inflater.inflate(R.layout.fragment_tab_weapon, container,
 				false);
-		holder.listView = (ListView) view.findViewById(R.id.listViewWeapons);
-		String category = getArguments().getString(KEY_WEAPON);
-		list = Model.getInstance(getSherlockActivity()).getCategory(category);
+		holder.listView = (ListView) holder.view.findViewById(R.id.listViewWeapons);
 		adapter = new CustomListViewAdapter(getSherlockActivity(), list);
 		holder.listView.setAdapter(adapter);
-		return view;
+		return holder.view;
 	}
 
 }

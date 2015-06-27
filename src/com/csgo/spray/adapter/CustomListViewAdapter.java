@@ -35,7 +35,6 @@ public class CustomListViewAdapter extends ArrayAdapter<Weapon> {
 	private static class ViewHolder{
 		ImageView imageView;
 		TextView weaponName;
-		TextView weaponPrice;
 		TextView weaponPattern;
 	}
 	@Override
@@ -47,13 +46,9 @@ public class CustomListViewAdapter extends ArrayAdapter<Weapon> {
 		holder.imageView = (ImageView) convertView
 				.findViewById(R.id.imageWeapon);
 		holder.weaponName = (TextView) convertView.findViewById(R.id.weaponName);
-		holder.weaponPrice = (TextView) convertView
-				.findViewById(R.id.weaponPrice);
 		holder.weaponPattern = (TextView) convertView.findViewById(R.id.showSprayPattern);
-		String price = "Cost: "+objects.get(position).getWeapon_price()+"\nMoney Per Kill:" + objects.get(position).getWeapon_kill_price();
 		holder.imageView.setImageResource(objects.get(position).getWeapon_image_id());
 		holder.weaponName.setText(objects.get(position).getWeapon_name());
-		holder.weaponPrice.setText(price);
 		holder.weaponPattern.setOnClickListener(new OnClickListener() {
 			
 			@Override

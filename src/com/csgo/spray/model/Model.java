@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.util.Log;
 
 import com.csgospray.R;
 
@@ -32,11 +33,17 @@ public class Model {
 
 	public ArrayList<Weapon> getCategory(String category) {
 		ArrayList<Weapon> tempList = new ArrayList<Weapon>();
+		long start = System.nanoTime();
 		for (Weapon item : weaponlist) {
 			if (item.getCategory().equals(category)) {
 				tempList.add(item);
 			}
 		}
+		long end = System.nanoTime();
+		
+		long result = end - start;
+		
+		Log.v("getCategory", String.valueOf(result));
 
 		return tempList;
 	}
@@ -55,10 +62,7 @@ public class Model {
 				String[] data = line.split(",");
 				String weaponName = data[0];
 				String catergory = data[1];
-				String price = "$" + data[2];
-				String price_per_kill = "$" + data[3];
-				weaponlist.add(new Weapon(weaponName, catergory, price,
-						price_per_kill));
+				weaponlist.add(new Weapon(weaponName, catergory));
 			}
 			for (int i = 0; i < weaponlist.size(); i++) {
 				int icon = icons_array.getResourceId(i, -1);

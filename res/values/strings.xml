@@ -29,6 +29,7 @@
  <string name="AboutIcon">About</string>
  <string name="AboutText">CSGOSpray aims to provide assistence to players to make their aim better, the team aims to provide further assistance with aim assitance. </string>
  <string name="CreditIcon">Credit</string>
+ <string name="creditText">Thanks to the research and commitment of twowordbird for giving a deep understanding on recoil and spray control of the game helping millions of players. </string>
  <string name="CreditOne"><a>twowordbird</a></string>
  <string name="CreditTwo"><a>Android Asynchronous Networking and Image Loading</a></string>
  <string name="CreditThree">Lastly do not forget to visit the CSGOSpray.com for the desktop version <a>Here</a></string>

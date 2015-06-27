@@ -68,7 +68,7 @@ public class MainActivity extends SherlockFragmentActivity {
 
 			}
 		};
-
+		
 		tab = actionBar.newTab().setText("Pistols").setTabListener(tabListener);
 		actionBar.addTab(tab);
 		tab = actionBar.newTab().setText("Rifles").setTabListener(tabListener);
@@ -81,14 +81,12 @@ public class MainActivity extends SherlockFragmentActivity {
 		getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
 	}
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = this.getSupportMenuInflater();
 		inflater.inflate(R.menu.main, menu);
 		return true;
 	}
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		Intent intent;
