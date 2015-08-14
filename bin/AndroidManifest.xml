@@ -1,18 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.csgospray"
-	android:versionCode="2"
-	android:versionName="1.1" >
+	android:versionCode="3"
+	android:versionName="2" >
 
 	<uses-sdk
 		android:minSdkVersion="8"
-		android:targetSdkVersion="19" />
+		android:targetSdkVersion="22" />
 
 	<application
 		android:allowBackup="true"
 		android:icon="@drawable/ic_launcher"
 		android:label="@string/app_name"
 		android:allowClearUserData="true"
-		android:theme="@style/Theme.Viewpagerstyle" >
+		android:theme="@style/Theme.Csgospray" >
 		<activity
 			android:name="com.csgo.spray.view.MainActivity"
 			android:hardwareAccelerated="false"
@@ -31,14 +31,6 @@
 			android:name="com.csgo.spray.view.ExtendedSprayPatternView"
 			android:hardwareAccelerated="false" >
 		</activity>
-		<activity
-   android:name="com.csgo.spray.view.WhyPatternView"
-   android:hardwareAccelerated="false" >
-  </activity>
-		<activity
-   android:name="com.csgo.spray.view.AboutView"
-   android:hardwareAccelerated="false" >
-  </activity>
 	</application>
 
 </manifest>

@@ -1,106 +1,64 @@
 package com.csgo.spray.view;
 
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
-
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.ActionBar.Tab;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.csgo.spray.model.DisableSwipeViewPager;
 import com.csgo.spray.tabfragments.SprayPatternFragmentTab;
 import com.csgospray.R;
 
-public class SprayPatternView extends SherlockFragmentActivity {
-	private ActionBar actionBar;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
+public class SprayPatternView extends AppCompatActivity {
 	private DisableSwipeViewPager viewPager;
-	private Tab tab;
 	private String key = "com.csgo.spray.SprayPatternView";
 	private String weapon;
+	private TabLayout tabLayout;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.spray_view);
 		weapon = this.getIntent().getStringExtra(key);
 		weapon = weaponChecker(weapon);
-		actionBar = getSupportActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		viewPager = (DisableSwipeViewPager) findViewById(R.id.spraypager);
-		
-		viewPager.setPagingEnabled(true);
+		tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.setHomeAsUpIndicator(R.drawable.ic_launcher_back);
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		FragmentManager fm = getSupportFragmentManager();
 		SprayPagerAdapter adapter = new SprayPagerAdapter(fm);
 		viewPager.setAdapter(adapter);
+		tabLayout.setupWithViewPager(viewPager);
 		
-		ViewPager.SimpleOnPageChangeListener listener = new ViewPager.SimpleOnPageChangeListener(){
-			@Override
-			public void onPageSelected(int position) {
-				super.onPageSelected(position);
-				actionBar.setSelectedNavigationItem(position);
-			}
-			
-		};
-		
-		viewPager.setOnPageChangeListener(listener);
-		ActionBar.TabListener tabListener = new ActionBar.TabListener() {
-
-			@Override
-			public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-				viewPager.setCurrentItem(tab.getPosition());
-			}
-
-			@Override
-			public void onTabSelected(Tab tab, FragmentTransaction ft) {
-				// TODO Auto-generated method stub
-				viewPager.setCurrentItem(tab.getPosition());
-
-			}
-
-			@Override
-			public void onTabReselected(Tab tab, FragmentTransaction ft) {
-				// TODO Auto-generated method stub
-				viewPager.setCurrentItem(tab.getPosition());
-			}
-		};
-		
-		
-		tab = actionBar.newTab().setText("Spray Pattern").setTabListener(tabListener);
-		actionBar.addTab(tab);
-		tab = actionBar.newTab().setText("Anti Pattern").setTabListener(tabListener);
-		actionBar.addTab(tab);
-		tab = actionBar.newTab().setText("Inverted Pattern").setTabListener(tabListener);
-		actionBar.addTab(tab);
-		getSupportActionBar().setHomeButtonEnabled(true);
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = this.getSupportMenuInflater();
+		MenuInflater inflater = this.getMenuInflater();
 		inflater.inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		Intent intent;
 		switch (item.getItemId()) {
-		case R.id.why_icon:
-			intent = new Intent(this, WhyPatternView.class);
-			startActivity(intent);
-			return true;
 		case R.id.about_icon:
-			intent = new Intent(this, AboutView.class);
-			startActivity(intent);
+			FragmentManager fm = this.getSupportFragmentManager();
+			AboutView aboutDialog = AboutView.newInstance();
+			aboutDialog.show(fm, "com.mainActivity.spray");
 			return true;
 		case android.R.id.home:
 			finish();
@@ -109,6 +67,7 @@ public class SprayPatternView extends SherlockFragmentActivity {
 			return true;
 		}
 	}
+
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
@@ -129,49 +88,60 @@ public class SprayPatternView extends SherlockFragmentActivity {
 		}
 		super.onBackPressed();
 	}
+
 	/**
 	 * Weapon Validation
+	 * 
 	 * @param weapon
 	 * @return
 	 */
-	private String weaponChecker(String weapon){
-		if(weapon.equals("dessert eagle")){
+	private String weaponChecker(String weapon) {
+		if (weapon.equals("dessert eagle")) {
 			weapon = "deagle";
 		}
-		if(weapon.equals("cz75 auto")){
+		if (weapon.equals("cz75 auto")) {
 			weapon = "cz75a";
 		}
 		return weapon;
 	}
-	private class SprayPagerAdapter extends FragmentPagerAdapter{
+
+	private class SprayPagerAdapter extends FragmentPagerAdapter {
 		private int number_tabs = 3;
+
 		public SprayPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
-		
+
+		private String[] fragment_titles = { "Spray Pattern", "Anti Pattern", "Inverted Pattern" };
+
 		@Override
 		public Fragment getItem(int postion) {
 			switch (postion) {
 			case 0:
-				SprayPatternFragmentTab fragmentOne = SprayPatternFragmentTab
-						.InstanceOf(weapon+"_p");
+				SprayPatternFragmentTab fragmentOne = SprayPatternFragmentTab.InstanceOf(weapon + "_p");
 				return fragmentOne;
 			case 1:
-				SprayPatternFragmentTab fragmentTwo = SprayPatternFragmentTab
-				.InstanceOf(weapon+"_c");
+				SprayPatternFragmentTab fragmentTwo = SprayPatternFragmentTab.InstanceOf(weapon + "_c");
 				return fragmentTwo;
 			case 2:
-				SprayPatternFragmentTab fragmentThree = SprayPatternFragmentTab
-				.InstanceOf(weapon+"_i");
+				SprayPatternFragmentTab fragmentThree = SprayPatternFragmentTab.InstanceOf(weapon + "_i");
 				return fragmentThree;
 			}
 			return null;
 		}
+
 		@Override
 		public int getItemPosition(Object object) {
 			// TODO Auto-generated method stub
 			return super.getItemPosition(object);
 		}
+
+		@Override
+		public CharSequence getPageTitle(int position) {
+			// TODO Auto-generated method stub
+			return fragment_titles[position];
+		}
+
 		@Override
 		public int getCount() {
 			// TODO Auto-generated method stub

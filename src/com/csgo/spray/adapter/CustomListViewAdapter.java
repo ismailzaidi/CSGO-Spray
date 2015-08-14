@@ -2,8 +2,15 @@ package com.csgo.spray.adapter;
 
 import java.util.List;
 
+import com.csgo.spray.model.Utility;
+import com.csgo.spray.model.Weapon;
+import com.csgo.spray.view.ExtendedSprayPatternView;
+import com.csgo.spray.view.SprayPatternView;
+import com.csgospray.R;
+
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,20 +20,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.csgo.spray.model.Utility;
-import com.csgo.spray.model.Weapon;
-import com.csgo.spray.view.ExtendedSprayPatternView;
-import com.csgo.spray.view.SprayPatternView;
-import com.csgospray.R;
-
 public class CustomListViewAdapter extends ArrayAdapter<Weapon> {
 	private String key = "com.csgo.spray.SprayPatternView";
 	private List<Weapon> objects;
-	private SherlockFragmentActivity context;
+	private FragmentActivity context;
 	private Utility utility;
 
-	public CustomListViewAdapter(SherlockFragmentActivity context, List<Weapon> objects) {
+	public CustomListViewAdapter(FragmentActivity context, List<Weapon> objects) {
 		super(context, R.layout.list_custom, objects);
 		this.objects = objects;
 		this.context = context;

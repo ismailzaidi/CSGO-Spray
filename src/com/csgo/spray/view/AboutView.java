@@ -1,90 +1,68 @@
 package com.csgo.spray.view;
 
-import java.util.ArrayList;
-
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.net.Uri;
-import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.MenuItem;
 import com.csgo.spray.model.Utility;
 import com.csgospray.R;
 
-public class AboutView extends SherlockFragmentActivity {
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class AboutView extends DialogFragment {
 	private String credit1 = "<a href=\"http://twowordbird.com/\">twowordbird</a>";
-	private ArrayList<String> list;
-	private ArrayAdapter<String> adapter;
+	private String credit2 = "<a href=\"http://ismailzd.co.uk/\">developer</a>";
+	private String credit3 = "<a href=\"http://steamcommunity.com/sharedfiles/filedetails/?id=419404847\">Recoil Master (CSGO Map)</a>";
 	private Utility utility;
-	private TextView textView;
+	private TextView creditOne, creditTwo, creditThree;
+
+	public static AboutView newInstance() {
+		AboutView fragment = new AboutView();
+		return fragment;
+	}
+
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.about_view);
-		populateData();
-		getSupportActionBar().setHomeButtonEnabled(true);
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		setStyle(DialogFragment.STYLE_NO_TITLE, R.style.Theme_AppCompat_Light_Dialog);
+	}
 
-		TextView textView = (TextView) findViewById(R.id.url);
-		textView.setText(Html.fromHtml(credit1));
-		textView.setMovementMethod(LinkMovementMethod.getInstance());
-		adapter = new ArrayAdapter<String>(getBaseContext(),
-				R.layout.custom_list_credit, list);
-		
-		LinearLayout linearLayout = (LinearLayout) findViewById(R.id.aboutlayout);
-		utility = new Utility(this.getApplicationContext());
-		
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		View aboutView = inflater.inflate(R.layout.about_view, container, false);
+		setCancelable(true);
+		creditOne = (TextView) aboutView.findViewById(R.id.url);
+		creditTwo = (TextView) aboutView.findViewById(R.id.url1);
+		creditThree = (TextView) aboutView.findViewById(R.id.url3);
+		setUpLinkForCredit();
+		LinearLayout linearLayout = (LinearLayout) aboutView.findViewById(R.id.aboutlayout);
+		LinearLayout returnButton = (LinearLayout) aboutView.findViewById(R.id.returnButton);
+		returnButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				getDialog().dismiss();
+			}
+		});
+		utility = new Utility(this.getActivity().getApplicationContext());
 		utility.setFontForView((ViewGroup) linearLayout);
+		return aboutView;
 	}
 
-	
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		if (item.getItemId() == android.R.id.home) {
-			finish();
-		}
-
-		return super.onOptionsItemSelected(item);
-	}
-
-	@Override
-	protected void onPostCreate(Bundle savedInstanceState) {
-		super.onPostCreate(savedInstanceState);
-	}
-
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-	}
-
-	@Override
-	public void onBackPressed() {
-		FragmentManager manager = getSupportFragmentManager();
-		if (manager.getBackStackEntryCount() > 0) {
-			manager.popBackStack();
-		} else {
-			super.onBackPressed();
-		}
-		super.onBackPressed();
-	}
-	
-	private void populateData() {
-		list = new ArrayList<String>();
-		list.add("twowordbird (Spray Patterns and Research)");
-		list.add("Android Asynchronous Networking and Image Loading");
+	private void setUpLinkForCredit() {
+		creditOne.setText(Html.fromHtml(credit1));
+		creditOne.setMovementMethod(LinkMovementMethod.getInstance());
+		creditTwo.setText(Html.fromHtml(credit2));
+		creditTwo.setMovementMethod(LinkMovementMethod.getInstance());
+		creditThree.setText(Html.fromHtml(credit3));
+		creditThree.setMovementMethod(LinkMovementMethod.getInstance());
 	}
 }

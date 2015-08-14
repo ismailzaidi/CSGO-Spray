@@ -33,18 +33,11 @@ public class Model {
 
 	public ArrayList<Weapon> getCategory(String category) {
 		ArrayList<Weapon> tempList = new ArrayList<Weapon>();
-		long start = System.nanoTime();
 		for (Weapon item : weaponlist) {
 			if (item.getCategory().equals(category)) {
 				tempList.add(item);
 			}
 		}
-		long end = System.nanoTime();
-		
-		long result = end - start;
-		
-		Log.v("getCategory", String.valueOf(result));
-
 		return tempList;
 	}
 

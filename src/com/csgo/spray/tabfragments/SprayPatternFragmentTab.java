@@ -1,17 +1,17 @@
 package com.csgo.spray.tabfragments;
 
+import com.csgospray.R;
+import com.koushikdutta.ion.Ion;
+
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.csgospray.R;
-import com.koushikdutta.ion.Ion;
-
-public class SprayPatternFragmentTab extends SherlockFragment{
+public class SprayPatternFragmentTab extends Fragment{
 	private static String KEY_WEAPON = "com.csgo.spray.key";
 	public static SprayPatternFragmentTab InstanceOf(String weaponName) {
 		SprayPatternFragmentTab fragment = new SprayPatternFragmentTab();

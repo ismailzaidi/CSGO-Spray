@@ -1,10 +1,10 @@
 <resources>
 
-	<string name="app_name">CSGOSpray</string>
+	<string name="app_name">CSGO Spray</string>
 
 	<string-array name="navigation">
 		<item>Select Weapon</item>
-		<item>Why CSGO Spray</item>
+		<item>Spray</item>
 		<item>About</item>
 	</string-array>
 
@@ -18,6 +18,8 @@
 	<color name="list_background">#12171c</color>
 	<color name="list_background_pressed">#1B1E1F</color>
 	<color name="list_divider">#272727</color>
+	<color name="ColorPrimaryDark">#E64A19</color>
+	<color name="ColorPrimary">#BDBDBD</color>
  <string name="basic">Basic</string>
  <string name="basicchild">When you fire a gun in CS:GO, there are two essential factors that affect where your bullets end up hitting: recoil and inaccuracy. Learning to control both of these things is absolutely necessary to master the game.\n\nFinaly repeat: \n1. Inaccuracy \n2. Recoil.</string>
  <string name="Inaccuracy">Inaccuracy</string>
@@ -27,8 +29,9 @@
  <string name="HowTo">How to Compensate</string>
  <string name="HowToChild">Most players will quickly learn that they can partially compensate for recoil by pulling the crosshair down while they spray. Let\u2019s ignore the horizontal component of recoil for a moment and see what happens when we limit ourselves to pulling straight down. The line travelling downwards, and the dots that appear at the top show the resulting impacts as governed by the weapon\u2019s recoil. While the first few shots are on target, it is clear that a prolonged spray with this approach will not work. Even at a short distance from your enemy about 80% of your shots are likely to miss. Adding horizontal compensation is absolutely necessary to spray accurately.\n\nThe basics are simple- pull down quickly during the first few shots, then sway left and right. Note that the timing for each of these guns is slightly different, as the M4A4 fires more bullets per second. With this approach the resulting impacts are tightly packed, so if you can memorize these, you will be able to land shots through to the end of your magazine.</string>
  <string name="AboutIcon">About</string>
- <string name="AboutText">CSGOSpray aims to provide assistence to players to make their aim better, the team aims to provide further assistance with aim assitance. </string>
+ <string name="AboutText">CSGOSpray aims to provide assistence to players to make their aim better, the team aims to provide further assistance with their in-game skills required. </string>
  <string name="CreditIcon">Credit</string>
+ <string name="CreditReturn">Close</string>
  <string name="creditText">Thanks to the research and commitment of twowordbird for giving a deep understanding on recoil and spray control of the game helping millions of players. </string>
  <string name="CreditOne"><a>twowordbird</a></string>
  <string name="CreditTwo"><a>Android Asynchronous Networking and Image Loading</a></string>

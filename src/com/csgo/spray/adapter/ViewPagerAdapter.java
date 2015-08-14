@@ -1,39 +1,44 @@
 package com.csgo.spray.adapter;
 
+import com.csgo.spray.tabfragments.HeavyFragmentTab;
+import com.csgo.spray.tabfragments.PistolFragmentTab;
+import com.csgo.spray.tabfragments.RiflesFragmentTab;
+import com.csgo.spray.tabfragments.SMGFragmentTab;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.View;
 
-import com.csgo.spray.tabfragments.WeaponFragmentTab;
-
-public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+public class ViewPagerAdapter extends FragmentPagerAdapter {
 	private int number_tabs = 4;
-	private WeaponFragmentTab fragment;
+	private Fragment fragment;
+	private String[] fragment_titles = {"Pistols","Rifles","SMG's","Heavy"};
 
 	public ViewPagerAdapter(FragmentManager fm) {
 		super(fm);
 	}
-
+	@Override
+	public CharSequence getPageTitle(int position) {
+		// TODO Auto-generated method stub
+		return fragment_titles[position];
+	}
 	@Override
 	public Fragment getItem(int position) {
 		int counter = position + 1;
 		Log.v("Item Clicked", "Postition: " + counter);
 		switch (position) {
 		case 0:
-			fragment = WeaponFragmentTab.InstanceOf("pistols");
+			fragment = PistolFragmentTab.InstanceOf();
 			return fragment;
 		case 1:
-			fragment = WeaponFragmentTab.InstanceOf("rifles");
+			fragment = RiflesFragmentTab.InstanceOf();
 			return fragment;
 		case 2:
-			fragment = WeaponFragmentTab.InstanceOf("smgs");
+			fragment = SMGFragmentTab.InstanceOf();
 			return fragment;
 		case 3:
-			fragment = WeaponFragmentTab.InstanceOf("heavy");
+			fragment = HeavyFragmentTab.InstanceOf();
 			return fragment;
 		}
 		return fragment;
