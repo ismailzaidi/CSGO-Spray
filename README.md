@@ -15,5 +15,6 @@ The animations of the spray pattern are provided by twowordbird, I therefore tha
 
 Libraries Used:
 
-- Android Sherlock.
+- Appcompat Library.
+- Google Design Support Library.
 - Android Asynchronous Networking and Image Loading for GIF rendering.
