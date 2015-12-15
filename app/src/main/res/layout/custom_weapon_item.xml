@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:context="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    context:cardCornerRadius="1dp"
+    context:contentPadding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/weaponName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="AK47"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/imageWeapon"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:adjustViewBounds="true"
+                android:padding="5dp"
+                android:src="@drawable/tec_9" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/black"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/showSprayPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:drawableLeft="@drawable/graph_icon"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

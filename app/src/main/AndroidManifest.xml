@@ -1,0 +1,36 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.csgospray"
+	android:versionCode="4"
+	android:versionName="3" >
+
+	<uses-sdk
+		android:minSdkVersion="8"
+		android:targetSdkVersion="23" />
+
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/ic_launcher"
+		android:label="@string/app_name"
+		android:allowClearUserData="true"
+		android:theme="@style/Theme.Csgospray" >
+		<activity
+			android:name="com.csgo.spray.view.MainActivity"
+			android:hardwareAccelerated="false"
+			android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.csgo.spray.view.SprayPatternView"
+			android:hardwareAccelerated="false" >
+		</activity>
+		<activity
+			android:name="com.csgo.spray.view.ExtendedSprayPatternView"
+			android:hardwareAccelerated="false" >
+		</activity>
+	</application>
+
+</manifest>
