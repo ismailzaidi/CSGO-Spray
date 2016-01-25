@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0f1e50108483dee0c569e63aebabf245489b171d">
+        <dex dex="C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_2f321d76d26b29632b0eb2a361da30aa81bbab35\classes.dex" />
+    </item>
+
+</items>

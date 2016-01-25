@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="22"
+    density="xxxhdpi"
+    format="1"
+    timestamp="1453747369715"
+    verifier="FIELD_TYPE_CHANGE" >
+
+    <task
+        name="javac"
+        duration="231" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="59" />
+    <task
+        name="verifier"
+        duration="7" />
+
+    <artifact
+        location="C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="1453746598098"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="1453747369715"
+        verifier="FIELD_TYPE_CHANGE" >
+        <artifact
+            location="C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

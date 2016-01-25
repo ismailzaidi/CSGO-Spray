@@ -1,0 +1,91 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:1:1-36:12
+	package
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:2:2-25
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:4:2-25
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:3:2-25
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:1:11-69
+uses-sdk
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:6:2-8:35
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.balysv\material-ripple\1.0.2\AndroidManifest.xml:8:5-10:41
+MERGED from [jp.wasabeef:recyclerview-animators:1.3.0] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\jp.wasabeef\recyclerview-animators\1.3.0\AndroidManifest.xml:8:5-10:41
+	android:targetSdkVersion
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:8:3-32
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:7:3-28
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml
+application
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:10:2-34:16
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\build\intermediates\exploded-aar\com.balysv\material-ripple\1.0.2\AndroidManifest.xml:12:5-20
+	android:label
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:13:3-35
+	android:allowClearUserData
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:14:3-36
+	android:allowBackup
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:11:3-29
+	android:icon
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:12:3-39
+	android:theme
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:15:3-41
+activity#com.csgo.spray.view.MainActivity
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:16:3-25:14
+	android:label
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:19:4-36
+	android:hardwareAccelerated
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:18:4-39
+	android:name
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:17:4-51
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:20:4-24:20
+action#android.intent.action.MAIN
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:21:5-57
+	android:name
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:21:13-54
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:23:5-65
+	android:name
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:23:15-62
+activity#com.csgo.spray.view.SprayPatternView
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:26:3-29:14
+	android:hardwareAccelerated
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:28:4-39
+	android:name
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:27:4-55
+activity#com.csgo.spray.view.ExtendedSprayPatternView
+ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:30:3-33:14
+	android:hardwareAccelerated
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:32:4-39
+	android:name
+		ADDED from C:\Users\Yusuf\AndroidStudioProjects\CSGO-Spray-master1\app\src\main\AndroidManifest.xml:31:4-63
